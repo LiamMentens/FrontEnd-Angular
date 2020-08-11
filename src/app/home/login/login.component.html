@@ -1,0 +1,20 @@
+
+<div class="container">
+  <div class="mx-auto w-25">
+
+      <h1 class="mt-5 text-center">Login</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" formControlName="email" id="email" required>
+          
+          <label for="wachtwoord">Password</label>
+          <input type="password" class="form-control" formControlName="wachtwoord" id="wachtwoord" required>
+        </div>
+        
+        <!-- <button type="submit" class="btn btn-primary w-100 mb-2" [disabled]="!loginForm.valid || submitted">Login</button>  -->
+        <button type="submit" class="btn btn-primary w-100 mb-2" >Login</button> 
+      </form>
+    </div>
+  
+</div>

@@ -1,0 +1,29 @@
+
+
+<div class="container">
+  <h1 class="text-center mt-5">Signup</h1>
+  <div class="mx-auto w-25">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" formControlName="email" id="email" required placeholder="email">
+        
+        
+        <label for="gebruikersnaam">Username</label>
+        <input type="text" class="form-control" formControlName="gebruikersnaam" id="gebruikersnaam" placeholder="username">
+        
+        
+        <label for="wachtwoord">Password</label>
+        <input type="password" class="form-control" formControlName="wachtwoord" id="wachtwoord"  required minlength="3" placeholder="password">
+        
+        
+        <label for="wachtwoordVerification">Verification</label>
+        <input type="password" class="form-control" formControlName="wachtwoordVerification" id="wachtwoordVerification"  required minlength="3" placeholder="password">
+        
+      </div>
+      <button type="submit" class="btn btn-primary w-100" [disabled]="!userForm.valid || submitted" required="">Create my account</button> 
+      <button type="submit" class="btn btn-danger w-100 mt-3" type="reset" (click)="onReset()" [disabled]="!userForm.valid || submitted">Cancel</button> 
+    </form>
+  </div>
+</div>
+  

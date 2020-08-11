@@ -1,0 +1,32 @@
+<div class="text-center">
+  <img src="../../../assets/images/logo_300x150.png" class="img-fluid" alt="Logo image" id="Logo">
+</div>
+<form [formGroup]="searchForm" (ngSubmit)="searchList()" ngValidateNative class="w-50 mt-2 mx-auto">
+  <div class="d-flex flex-row">
+    <input class="form-control form-control-lg p-2" type="search" placeholder="search..." formControlName="searchBox">
+    <button type="submit" class="btn btn-outline-primary btn-lg p-2">Search</button>
+  </div>
+</form>
+
+      
+<app-search-results *ngIf="searchResults" [lists]="searchResults"></app-search-results>
+
+<p *ngIf="noResult === false">No results found</p>
+
+  
+  <ul class="list-group list-group-flush" >
+    <li class="list-group-item" *ngFor="let l of randomLists">
+      <h4>{{l.naam}}</h4>
+      <h5 class="text-muted">{{l.startDatum | date : 'dd/MM/yyyy' }} -   {{l.eindDatum | date : 'dd/MM/yyyy' }}</h5>
+      
+      <div class="row">
+        <div class="col-10">
+          <p>{{l.beschrijving}}</p>
+          
+        </div>
+        <div class="col-2">
+          <a class="p-2 btn btn-outline-danger" routerLink="/listDetail/{{l.lijstID}}" >Go to list</a>
+        </div>
+      </div>
+    </li>
+  </ul>

@@ -1,0 +1,23 @@
+<div class="wrapper">
+
+    <nav id="sidebar" class="mt-2 border-right">
+        <h5 class="text-center font-weight-bold">Menu</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a  class="nav-link btn btn-outline-primary" routerLink="/" (click)="setTitle('Home')" >Home</a></li>
+            <li class="list-group-item" *ngIf="!loggedIn"><a c class="nav-link btn btn-outline-primary" routerLink="/login" (click)="setTitle('Login')">Login</a></li>
+            <li class="list-group-item" *ngIf="!loggedIn"><a class="nav-link btn btn-outline-primary" routerLink="/signup" (click)="setTitle('Signup')" >Signup</a></li>
+            <li class="list-group-item" *ngIf="loggedIn"><a class="nav-link btn btn-outline-primary" routerLink="/dashboard" (click)="setTitle('Dashboard')">Dashboard</a>
+            </li>
+        </ul>
+        
+        
+        <a class="nav-link btn btn-outline-danger  m-5" routerLink="/Login" id="logOutBtn"
+        routerLinkActive="active" *ngIf="loggedIn" [routerLinkActiveOptions]="{exact:true}" (click)="logOff()">Log out</a>
+    </nav>
+    
+    <!-- Page Content -->
+    <div id="content" class="container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+    

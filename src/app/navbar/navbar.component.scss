@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    width: 200px;
+    min-height: 100vh;
+    position: fixed;
+}
+
+// #sidebar.active {
+//     margin-left: -200px;
+// }
+
+#logOutBtn{
+    position: fixed;
+    bottom: 0;
+}
+
+
+
