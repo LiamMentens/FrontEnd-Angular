@@ -4,7 +4,6 @@ import { LoginComponent } from './home/login/login.component';
 import { SignupComponent } from './home/signup/signup.component';
 import { AuthGuard } from './home/helpers/auth.guard';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
-import { ProfileComponent } from './user/profile/profile.component';
 import { ListComponent } from './user/list/list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ListDetailComponent } from './user/list/list-detail/list-detail.component';
@@ -19,7 +18,6 @@ const routes: Routes = [
   {path:'listEdit/:id',component: ListEditComponent, canActivate:[AuthGuard]},
   {path:'searchResults',component: SearchResultsComponent, canActivate:[AuthGuard]},
   {path:'dashboard',component: DashboardComponent, canActivate:[AuthGuard]},
-  {path:'profile',component: ProfileComponent, canActivate:[AuthGuard]},
   {path:'navbar',component: NavbarComponent, canActivate:[AuthGuard]},
 ];
 

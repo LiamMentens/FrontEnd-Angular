@@ -9,7 +9,6 @@ import { Dashboard } from 'src/app/ViewModels/dashboard.viewModel';
 import { Stem } from 'src/app/models/stem.model';
 import { Item } from 'src/app/models/item.model';
 import { ListService } from 'src/app/Services/list.service';
-import { LijstGebruiker } from 'src/app/models/lijst-gebruiker.model';
 
 @Component({
   selector: 'app-dashboard',

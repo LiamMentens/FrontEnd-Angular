@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticateService } from '../Services/authenticate.service';
-import { Login } from '../models/login.model';
-import { NavbarService } from '../Services/navbar.service';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -16,9 +14,7 @@ export class NavbarComponent implements OnInit {
     private router:Router, 
     private _authenticationService: AuthenticateService,
     private titleService: Title
-    // private nav : NavbarService,
     ) { 
-    // this.nav.hide();
   }
   
   ngOnInit(): void {
@@ -41,7 +37,6 @@ export class NavbarComponent implements OnInit {
   logOff(){
     localStorage.removeItem('token');
     sessionStorage.clear();
-    // this.nav.hide();
     this._authenticationService.isLoggedin.next(false);
     this.router.navigate(['login'], {replaceUrl: true});
   }

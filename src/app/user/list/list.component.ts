@@ -45,14 +45,6 @@ export class ListComponent implements OnInit {
     this.showRandomList();
   }
 
-  // showListDetail(l:Lijst){
-  //   this.searchResults = [];
-  //   this.selectedList = l;
-  //   this.noResult = true;
-  //   this.lijstID = this.selectedList.LijstID;
-  //   this.lijstNaam = this.selectedList.naam;
-  // }
-
   searchList(){
     this.searchResults=[];
     this.selectedList = null;
@@ -76,7 +68,5 @@ export class ListComponent implements OnInit {
       })
     }
     console.log(this.randomLists)
-
-    
   }
 }

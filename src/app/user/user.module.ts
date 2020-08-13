@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProfileComponent } from './profile/profile.component';
 import { ListComponent } from './list/list.component';
 import { ListService } from '../Services/list.service';
 import { NgbModule, NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
@@ -14,7 +13,7 @@ import { SearchResultsComponent } from './list/search-results/search-results.com
 
 
 @NgModule({
-  declarations: [DashboardComponent, ProfileComponent, ListComponent, ListDetailComponent, ListEditComponent, SearchResultsComponent],
+  declarations: [DashboardComponent, ListComponent, ListDetailComponent, ListEditComponent, SearchResultsComponent],
   providers:[ListService],
   imports: [
     CommonModule,

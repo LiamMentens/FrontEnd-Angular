@@ -14,7 +14,6 @@ import { AuthGuard } from './home/helpers/auth.guard';
 import { NgbModule, NgbDropdown, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './user/dashboard/dashboard.component';
-import { ProfileComponent } from './user/profile/profile.component';
 import { UserModule } from './user/user.module';
 import { AuthenticateService } from './Services/authenticate.service';
 import { ListComponent } from './user/list/list.component';
